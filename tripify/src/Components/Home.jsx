@@ -21,6 +21,7 @@ import {
   Portal,
   useMediaQuery,
   Flex,
+  Spacer,
   Text,
   useCounter,
   HStack,
@@ -28,6 +29,8 @@ import {
   Heading,
   useToast,
 } from "@chakra-ui/react";
+
+
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 function Main() {
@@ -389,7 +392,14 @@ function Main() {
   }, []);
 
   return (
-    <Container maxW="2xxl" mt={-55} bgImage="https://forever.travel-assets.com/flex/flexmanager/images/2021/06/25/TVLY_SeizeYourSomeday_lpheroB_1680x945_20210623.jpg?impolicy=fcrop&w=600&h=150&q=medium" bgSize="100%" bgRepeat="no-repeat" bgPos="top" >
+    <Container
+      maxW="2xxl"
+      mt={-55}
+      bgImage="https://forever.travel-assets.com/flex/flexmanager/images/2021/06/25/TVLY_SeizeYourSomeday_lpheroB_1680x945_20210623.jpg?impolicy=fcrop&w=600&h=150&q=medium"
+      bgSize="100%"
+      bgRepeat="no-repeat"
+      bgPos="top"
+    >
       {isLoading ? (
         <Flex justify="center" mt={"5"}>
           <Spinner
@@ -413,7 +423,6 @@ function Main() {
             width={1000}
             ml={250}
             height="370px"
-            
           >
             <Tabs align="center">
               <TabList w="90%">
@@ -421,7 +430,6 @@ function Main() {
                   flexWrap="wrap"
                   justify="center"
                   gap={isLargerThan768 ? "2" : null}
-                  
                 >
                   <TabSection name={"Stays"} />
                   <TabSection name={"Flights"} />
@@ -449,197 +457,397 @@ function Main() {
               </TabPanels>
             </Tabs>
           </Box>
+
           <Container>
-          <Container
-            boxShadow={BoxShadow}
-            maxW="400px"
-            h="200px"
-            mt="80px"
-            borderRadius="10px"
-            bgImage="url('https://images.unsplash.com/photo-1506059612708-99d6c258160e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80')"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-          >
-            <Flex
-              h="200px"
-              direction="column"
-              gap={5}
-              // justify="center"
-              // align="center"
-              p={5}
-              textAlign="center"
-              color="white"
-              textShadow="0 0 20px black"
-              fontWeight="bold"
-            >
-              <Box>
-                <Heading as="h1" color="white" fontSize="sm">
-                  Save instantly with Expedia Rewards
-                </Heading>
-              </Box>
-              <Box>
-                <Text color="white" fontSize="sm">
-                  You can enjoy access to perks like Member Prices, saving you
-                  10% or more on select hotels. Terms may apply.
-                </Text>
-              </Box>
-              <Box>
-                <Link to="/" mb="5%" mt="2%" w="200px" size="lg">
-                  <Button
-                    mb="5%"
-                    mt="2%"
-                    w="200px"
-                    colorScheme="blue"
-                    size="sm"
-                  >
-                    See Member Prices
-                  </Button>
-                </Link>
-              </Box>
+            <Flex justify="space-around" align="center">
+              <Container
+                boxShadow={BoxShadow}
+                width="500px"
+                h="200px"
+                mt="80px"
+                mr="10px"
+                borderRadius="10px"
+                bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_FitForYou_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=400&h=171&q=mediumLow')"
+                bgPosition="center"
+                bgRepeat="no-repeat"
+                bgSize="cover"
+              >
+                <Flex
+                  h="200px"
+                  direction="column"
+                  gap={5}
+                  width="400px"
+                  // justify="center"
+                  // align="center"
+                  p={5}
+                  textAlign="center"
+                  color="white"
+                  textShadow="0 0 20px black"
+                  fontWeight="bold"
+                >
+                  <Box>
+                    <Heading
+                      as="h1"
+                      color="white"
+                      fontSize="lg"
+                      mt="150px"
+                      mr="70px"
+                    >
+                      Find your perfect trip
+                    </Heading>
+                  </Box>
+                  <Box>
+                    <Heading as="h4" color="black" fontSize="sm">
+                      Plan a trip for the whole family—from family travel tips
+                      to family-friendly filters, our tools make it easy.
+                    </Heading>
+                  </Box>
+                </Flex>
+              </Container>
+              <Container
+                boxShadow={BoxShadow}
+                width="500px"
+                h="200px"
+                mt="80px"
+                mr="10px"
+                borderRadius="10px"
+                bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_Transparency_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=400&h=171&q=mediumLow')"
+                bgPosition="center"
+                bgRepeat="no-repeat"
+                bgSize="cover"
+              >
+                <Flex
+                  h="200px"
+                  direction="column"
+                  gap={5}
+                  width="400px"
+                  // justify="center"
+                  // align="center"
+                  p={5}
+                  textAlign="center"
+                  color="white"
+                  textShadow="0 0 20px black"
+                  fontWeight="bold"
+                >
+                  <Box>
+                    <Heading
+                      as="h1"
+                      color="white"
+                      fontSize="lg"
+                      mt="150px"
+                      mr="70px"
+                    >
+                      Book with flexibility
+                    </Heading>
+                  </Box>
+                  <Box>
+                    <Heading as="h4" color="black" fontSize="sm">
+                      Looking for a change of scenery, but want something
+                      flexible? With free cancellation on most hotels, you can
+                      book with peace of mind.{" "}
+                    </Heading>
+                  </Box>
+                </Flex>
+              </Container>
+              <Container
+                boxShadow={BoxShadow}
+                width="500px"
+                h="200px"
+                mt="80px"
+                mr="10px"
+                borderRadius="10px"
+                bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_GotYourBack_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=400&h=171&q=mediumLow')"
+                bgPosition="center"
+                bgRepeat="no-repeat"
+                bgSize="cover"
+              >
+                <Flex
+                  h="200px"
+                  direction="column"
+                  gap={5}
+                  width="400px"
+                  // justify="center"
+                  // align="center"
+                  p={5}
+                  textAlign="center"
+                  color="white"
+                  textShadow="0 0 20px black"
+                  fontWeight="bold"
+                >
+                  <Box>
+                    <Heading
+                      as="h1"
+                      color="white"
+                      fontSize="lg"
+                      mt="150px"
+                      mr="70px"
+                    >
+                      We've got your back
+                    </Heading>
+                  </Box>
+                  <Box>
+                    <Heading as="h4" color="black" fontSize="sm">
+                      Need more help along your journey? We offer 24/7 support
+                      on social and through virtual agents onsite.{" "}
+                    </Heading>
+                  </Box>
+                </Flex>
+              </Container>
             </Flex>
           </Container>
-          <Container
-            boxShadow={BoxShadow}
-            maxW="400px"
-            h="200px"
-            mt="80px"
-            borderRadius="10px"
-            bgImage="url('https://images.unsplash.com/photo-1506059612708-99d6c258160e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80')"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-          >
-            <Flex
-              h="200px"
-              direction="column"
-              gap={5}
-              // justify="center"
-              // align="center"
-              p={5}
-              textAlign="center"
-              color="white"
-              textShadow="0 0 20px black"
-              fontWeight="bold"
+
+          <Flex justify="space-around" align="center">
+            <Container
+              boxShadow={BoxShadow}
+              maxW="xl"
+              borderRadius="10px"
+              bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_AllInclusive_imgB_375x468_20211104.jpg')"
+              bgPosition="center"
+              bgRepeat="no-repeat"
+              bgSize="cover"
+              mt={"100px"}
+              h={"300px"}
+              width={800}
             >
-              <Box>
-                <Heading as="h1" color="white" fontSize="sm">
-                  Save instantly with Expedia Rewards
-                </Heading>
-              </Box>
-              <Box>
-                <Text color="white" fontSize="sm">
-                  You can enjoy access to perks like Member Prices, saving you
-                  10% or more on select hotels. Terms may apply.
-                </Text>
-              </Box>
-              <Box>
-                <Link to="/" mb="5%" mt="2%" w="200px" size="lg">
-                  <Button
-                    mb="5%"
-                    mt="2%"
-                    w="200px"
-                    colorScheme="blue"
-                    size="sm"
-                  >
-                    See Member Prices
-                  </Button>
-                </Link>
-              </Box>
-            </Flex>
-          </Container>
-          <Container
-            boxShadow={BoxShadow}
-            maxW="400px"
-            h="200px"
-            mt="80px"
-            borderRadius="10px"
-            bgImage="url('https://images.unsplash.com/photo-1506059612708-99d6c258160e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80')"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-          >
-            <Flex
-              h="200px"
-              direction="column"
-              gap={5}
-              // justify="center"
-              // align="center"
-              p={5}
-              textAlign="center"
-              color="white"
-              textShadow="0 0 20px black"
-              fontWeight="bold"
+              <Flex
+                h="full"
+                direction="column"
+                justify="center"
+                align="center"
+                p={2}
+                textAlign="center"
+                color="white"
+                textShadow="0 0 20px black"
+                fontWeight="bold"
+                gap={"30px"}
+              >
+                <Box>
+                  <Heading as="h3" color="white" fontSize="40px">
+                    All-inclusive resorts
+                  </Heading>
+                </Box>
+                <Box>
+                  <Heading as="h3" color="white" fontSize="15px">
+                    Think of nothing beyond having a great time with your family
+                  </Heading>
+                </Box>
+                <Button bgColor="white" color="blue">
+                  View Deals
+                </Button>
+              </Flex>
+            </Container>
+            <Container
+              boxShadow={BoxShadow}
+              maxW="xl"
+              borderRadius="10px"
+              bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_LastMinute_imgB_375x468_20211104.jpg')"
+              bgPosition="center"
+              bgRepeat="no-repeat"
+              bgSize="cover"
+              mt={"100px"}
+              h={"300px"}
             >
-              <Box>
-                <Heading as="h1" color="white" fontSize="sm">
-                  Save instantly with Expedia Rewards
-                </Heading>
-              </Box>
-              <Box>
-                <Text color="white" fontSize="sm">
-                  You can enjoy access to perks like Member Prices, saving you
-                  10% or more on select hotels. Terms may apply.
-                </Text>
-              </Box>
-              <Box>
-                <Link to="/" mb="5%" mt="2%" w="200px" size="lg">
-                  <Button
-                    mb="5%"
-                    mt="2%"
-                    w="200px"
-                    colorScheme="blue"
-                    size="sm"
-                  >
-                    See Member Prices
-                  </Button>
-                </Link>
-              </Box>
-            </Flex>
-          </Container>
-          </Container>
-
-
-
-
-
-          <Container
-            boxShadow={BoxShadow}
-            maxW="container.xl"
-            borderRadius="10px"
-            bgImage="url('https://images.unsplash.com/photo-1581609836630-9007630f7a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-            mt={"50px"}
-            h={"300px"}
-          >
-            <Flex
-              h="full"
-              direction="column"
-              justify="center"
-              align="center"
-              p={2}
-              textAlign="center"
-              color="white"
-              textShadow="0 0 20px black"
-              fontWeight="bold"
-              gap={"30px"}
-            >
-              <Box>
-                <Heading as="h3" color="white" fontSize="40px">
-                  Plan ahead and save
-                </Heading>
-              </Box>
-              <Box>
-                <Heading as="h3" color="white" fontSize="30px">
-                  Book 60 days in advance for 20% off seletct stays.
-                </Heading>
-              </Box>
-            </Flex>
-          </Container>
+              <Flex
+                h="full"
+                direction="column"
+                justify="center"
+                align="center"
+                p={2}
+                textAlign="center"
+                color="white"
+                textShadow="0 0 20px black"
+                fontWeight="bold"
+                gap={"30px"}
+              >
+                <Box>
+                  <Heading as="h3" color="white" fontSize="40px">
+                    Last minute getaways
+                  </Heading>
+                </Box>
+                <Box>
+                  <Heading as="h3" color="white" fontSize="15px">
+                    Celebrate the moment with an unexpected getaway
+                  </Heading>
+                </Box>
+                <Button bgColor="white" color="blue">
+                  View Deals
+                </Button>
+              </Flex>
+            </Container>
+          </Flex>
         </>
       )}
+      <Box ml={20} fontWeight="bold" fontSize="3xl" mt={10}>
+        <h1>Start planning your next trip</h1>
+      </Box>
+
+      <Container>
+        <Flex justify="space-around" align="center">
+          <Container
+            boxShadow={BoxShadow}
+            width="500px"
+            h="200px"
+            mt="10px"
+            mr="10px"
+            borderRadius="10px"
+            bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_Beach_imgB_900x506_20211104.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow')"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+          >
+            <Flex
+              h="200px"
+              direction="column"
+              gap={5}
+              width="300px"
+              // justify="center"
+              // align="center"
+              p={5}
+              textAlign="center"
+              color="white"
+              textShadow="0 0 20px black"
+              fontWeight="bold"
+            >
+              <Box>
+                <Heading
+                  as="h1"
+                  color="white"
+                  fontSize="lg"
+                  mt="150px"
+                  mr="30px"
+                >
+                  Sunny beach hotel offers
+                </Heading>
+              </Box>
+            </Flex>
+          </Container>
+          <Container
+            boxShadow={BoxShadow}
+            width="500px"
+            h="200px"
+            mt="10px"
+            mr="10px"
+            borderRadius="10px"
+            bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_Car_imgB_900x506_20211104.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow')"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+          >
+            <Flex
+              h="200px"
+              direction="column"
+              gap={5}
+              width="300px"
+              // justify="center"
+              // align="center"
+              p={5}
+              textAlign="center"
+              color="white"
+              textShadow="0 0 20px black"
+              fontWeight="bold"
+            >
+              <Box>
+                <Heading
+                  as="h1"
+                  color="white"
+                  fontSize="lg"
+                  mt="150px"
+                  mr="70px"
+                >
+                  Car rental deals
+                </Heading>
+              </Box>
+            </Flex>
+          </Container>
+          <Container
+            boxShadow={BoxShadow}
+            width="500px"
+            h="200px"
+            mt="10px"
+            mr="10px"
+            borderRadius="10px"
+            bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_MOD_imgB_900x506_20211104.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow')"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+          >
+            <Flex
+              h="200px"
+              direction="column"
+              gap={5}
+              width="300px"
+              // justify="center"
+              // align="center"
+              p={5}
+              textAlign="center"
+              color="white"
+              textShadow="0 0 20px black"
+              fontWeight="bold"
+            >
+              <Box>
+                <Heading
+                  as="h1"
+                  color="white"
+                  fontSize="lg"
+                  mt="150px"
+                  mr="70px"
+                >
+                  Member discounts
+                </Heading>
+              </Box>
+            </Flex>
+          </Container>
+
+          <Container
+            boxShadow={BoxShadow}
+            width="500px"
+            h="200px"
+            mt="10px"
+            mr="10px"
+            borderRadius="10px"
+            bgImage="url('https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_VacationRentals_imgB_900x506_20211104.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow')"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+          >
+            <Flex
+              h="200px"
+              direction="column"
+              gap={5}
+              width="300px"
+              // justify="center"
+              // align="center"
+              p={5}
+              textAlign="center"
+              color="white"
+              textShadow="0 0 20px black"
+              fontWeight="bold"
+            >
+              <Box>
+                <Heading
+                  as="h1"
+                  color="white"
+                  fontSize="lg"
+                  mt="150px"
+                  mr="70px"
+                >
+                  Vacation rental offers
+                </Heading>
+              </Box>
+            </Flex>
+          </Container>
+        </Flex>
+      </Container>
+
+      <Box mt={10} ml={10}>
+  <iframe
+    title='travelocity'
+    src='https://www.youtube.com/embed/ItS8X0SjT4s'
+    allowFullScreen
+    width='1350px'
+    height="500px"
+  />
+      </Box>
     </Container>
   );
 }

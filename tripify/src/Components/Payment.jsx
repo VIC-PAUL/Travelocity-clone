@@ -416,7 +416,7 @@ function Payment() {
                 Use a coupon, credit, or promotion code
               </Text>
               <Text pr="4" pl="4" pb="4" fontSize="xs">
-                Trip total includes GST that Expedia pays to its vendors (e.g.
+                Trip total includes GST that Travelocity pays to its vendors (e.g.
                 Hotels). We retain our service fee for facilitating your travel
                 reservation. For details please see our terms of use.
               </Text>
@@ -591,7 +591,7 @@ function Payment() {
                 <Input type="text" mt="1" value={userData.email} />
               </FormControl>
               <Checkbox p="3" defaultChecked>
-                Please send me Expedia emails with travel deals, special offers
+                Please send me Travelocity emails with travel deals, special offers
                 and other information.
               </Checkbox>
               <FormControl p="3">
@@ -602,7 +602,7 @@ function Payment() {
               </FormControl>
               <Text pr="3" pl="3" pb="3" fontSize="sm">
                 By creating an account, I agree to the Terms of Use opens in a
-                new window, Privacy Policy opens in a new window, and Expedia
+                new window, Privacy Policy opens in a new window, and Travelocity
                 Rewards Terms and Conditions.
               </Text>
             </Box>

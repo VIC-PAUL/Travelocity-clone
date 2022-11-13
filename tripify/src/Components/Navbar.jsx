@@ -119,9 +119,6 @@ const Navbar = () => {
               {loggedUserName.email}
             </Heading>
           </Center>
-          <Center mb="4">
-            <Button colorScheme="blue">Blue Member</Button>
-          </Center>
         </PopoverHeader>
         <PopoverBody>
           <PopoverFooter>
