@@ -1,6 +1,5 @@
 import React from "react";
 import { ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
-import { BiWorld } from "react-icons/bi";
 import { BsBuilding } from "react-icons/bs";
 import { BsBellFill } from "react-icons/bs";
 import { MdOutlineFlight, MdOutlineHolidayVillage } from "react-icons/md";
