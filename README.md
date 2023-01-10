@@ -9,10 +9,9 @@ created search functionality for the hotels page, designed favorite and payment 
 
 
 <img src="https://i.postimg.cc/brTYvYzY/Screenshot-7628.png" alt="img1">
-<img src="https://i.postimg.cc/8csX7tGF/Screenshot-7629.png" alt="img2">
-<img src="https://i.postimg.cc/hG5pHVTc/Screenshot-7630.png" alt="img3">
-<img src="https://i.postimg.cc/nr0sPG91/Screenshot-7631.png" alt="img4">
-<img src="https://i.postimg.cc/LspHjZn4/Screenshot-7632.png" alt="img5">
+<img src="https://i.postimg.cc/hG5pHVTc/Screenshot-7630.png" alt="img2">
+<img src="https://i.postimg.cc/nr0sPG91/Screenshot-7631.png" alt="img3">
+<img src="https://i.postimg.cc/LspHjZn4/Screenshot-7632.png" alt="img4">
 
 
 ## Tech Stacks
